@@ -36,7 +36,7 @@
                                 <h5>{{ $data->nama }}</h5>
                                 <p>{{ $data->alamat }}</p>
                                 <a style="float: right;" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Tempat Wisata ?')" href="/admin/wisata/{{ $data->id }}">
-                                    <svg style="fill: #f8ba10!important" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+                                    <svg style="fill: #43f3b8!important" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
                                 </a>
                             </div>
                         </div>

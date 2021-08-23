@@ -110,20 +110,27 @@ class WisataController extends Controller
         $data->deskripsi = $request->deskripsi;
         $data->alamat = $request->alamat;
         $data->waktu = $request->waktu;
-        $data->tanggal_dibangun = $request->tanggal_dibangun;
+        $data->harga_tiket = $request->harga_tiket;
+        $data->link_map = $request->link_map;
+        $data->kategori = $request->kategori;
         $data->telepon = $request->telepon;
+        $data->tips = $request->tips;
         $data->save();
 
         $request->session()->flash('message','Berhasil Mengedit Data');
         return redirect()->back();
       }
       else{
+        $data->background = $imageName;
         $data->nama = $request->nama;
         $data->deskripsi = $request->deskripsi;
         $data->alamat = $request->alamat;
         $data->waktu = $request->waktu;
-        $data->tanggal_dibangun = $request->tanggal_dibangun;
+        $data->harga_tiket = $request->harga_tiket;
+        $data->link_map = $request->link_map;
+        $data->kategori = $request->kategori;
         $data->telepon = $request->telepon;
+        $data->tips = $request->tips;
         $data->save();
 
         $request->session()->flash('message','Berhasil Mengedit Data');

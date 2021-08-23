@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="{{url('img/icon.png')}}" rel="icon" type="image/png">
     <link rel="stylesheet" href="{{url('assets/styles/bootstrap/bootstrap.min.css')}}" />
-    <link rel="stylesheet" href="{{url('assets/styles/styles.css')}}" />
+    <link rel="stylesheet" href="{{url('assets/styles/styles1.css')}}" />
     <title>Ketapang</title>
 </head>
 
@@ -16,13 +16,13 @@
 			<div class="wrap-login">
         <div class="login-pic js-tilt" data-tilt>
           <center>
-            <img style="margin-top:10px" src="{{url('assets/images/gedung_sate.png')}}" width="300px" alt="">
+            <img style="margin-top:10px" src="{{url('assets/images/lotim.png')}}" width="300px" alt="">
           </center>
 				</div>
         <form role="form" action ="/login" method="post">
           @csrf
 				<span class="login-form-title">
-					<img src="{{url('assets/images/logo/KetapangLogo-Color.png')}}" width="220px" alt="Logo">
+					<img src="{{url('assets/images/logo/logo_box.png')}}" width="220px" alt="Logo">
 				</span>
 
         @if ($errors->any())
@@ -59,14 +59,6 @@
 					<div class="container-login-form-btn">
 						<input class="login-form-btn" type="submit" name="submit" id="submit" value="Login" class="btn">
 					</div>
-					<div class="text-center p-t-136">
-            <font size="3px" color="#9e9e9e">atau</font>
-					</div>
-          <div class="text-center google-auth-btn">
-            <a href="/auth/google">
-              <img src="{{asset('assets/images/signin.png')}}" width="250px" alt="">
-            </a>
-          </div>
           <center>
             <font size="3px">Belum Punya Akun ?</font>
             <a class="txt2"  href="/register">

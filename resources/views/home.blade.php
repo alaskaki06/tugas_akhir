@@ -1,7 +1,7 @@
 @extends('template.navigation')
 
 @section('konten')
-<!-- Hero Landing-->
+<!-- beranda -->
     <section class="hero">
     <div class="hero-overlay">
             <span></span>
@@ -16,8 +16,8 @@
                 <div class="row">
                     <div class="col-md-5">
                       <div class="header">
-                        <h1>Ketapang</h1>
-                        <p>Temukan dan Jelajahi Beragam Tempat Wisata Nan Indah Dan Menarik <br>Di <strong>Paris Van Java-nya</strong><br> Indonesia </p>
+                        <h1>Kuy Jalan</h1>
+                        <p>website ini menampilkan deretan informasi seputar wisata-wisata yang ada <br>Di <strong>Lombok Timur</strong></p>
                       </div>
                     </div>
                     <div class="col-md-7">
@@ -30,15 +30,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Bandung</h2>
-                    <p>Paris van Java merupakan sebutan untuk Kota Bandung pada zaman kolonial Belanda yang memiliki arti
-                       <strong><i>"Paris Van Java"</i></strong> julukan ini diberikan karena Kota
-                       Bandung terkenal dengan keindahan alam dan kesejukan udaranya. Meskipun julukan tersebut hanya sampai zaman kolonial
-                       akan tetapi,<br> sisa-sisa <strong><i>"Paris Van Java"</i></strong> tersebut, masih terasa sampai sekarang.
+                    <h2>Lombok Timur</h2>
+                    <p>lombok timur merupakan destinasi yang sayang anda lewatkan ketika anda berlibur ke pulau Lombok
+                       Lombok timur memiliki banyak tempat wisata yang menakjubkan
+                       Banyak sekali para wisatawan yang menjadikan wisata lombok timur menjadi destinasi wisata wajib bagi mereka.
                     </p>
                 </div>
+                <!-- vidio -->
                 <div class="col-md-6">
-                  <iframe width="88%" height="280" src="https://www.youtube.com/embed/DOYnxZHWSV8"
+                  <iframe width="88%" height="280" src="https://www.youtube.com/embed/TRvQMAjJe8k"
                   frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                   </iframe>
                 </div>
@@ -47,52 +47,42 @@
     </section>
     <section class="landing features">
         <div class="container features-content">
+              <center><h2 style="margin-top:10px">Persiapan</h2></center>
             <div class="row ">
                 <div class="col-md-4">
-                    <img src="{{url('assets/images/highlight/kuliner.png')}}" width="120px" alt="">
-                    <h3>Kuliner</h3>
+                    <img src="{{url('assets/images/highlight/tujuan.png')}}" width="120px" alt="">
+                    <h3>Tujuan Wisata</h3>
                     <p>
-                      Kuliner enak dan murah meriah memang identik dengan kota yang satu ini, kuliner jajanan yang unik dan legendaris menggoyang lidah pun ada disini. Temui dan rasakan bedanya.
+                      Hal pertama yang harus kamu siapkan tentunya adalah menentukan destinasi wisata tujuanmu. kemana kamu akan berlibur? Apakah kamu akan mengunjungi wisata pantai, danau, gunung yyang ada di lombok timur?
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <img src="{{url('assets/images/highlight/wisata.png')}}" width="120px" alt="">
-                    <h3>Wisata</h3>
+                    <img src="{{url('assets/images/highlight/wktu.png')}}" width="120px" alt="">
+                    <h3>Waktu Liburan</h3>
                     <p>
-                      Destinasi wisata serta pemandangan alam yang di gemari wisatawan lokal maupun mancanegara sangatlah beraneka ragam dan cocok untuk dikunjungi untuk berlibur dan bersantai.
+                     Untuk yang sedang bekerja, mengunjungi destinasi wisata domestik saat hari liburan nasional dan cuti bersama mungkinakan menimbulkan beberapa ketidak nyamanan seperti perjalanan macet dan tempat wisata yang ramai.
                     </p>
 
                 </div>
                 <div class="col-md-4">
-                    <img src="{{url('assets/images/highlight/sejarah.png')}}" width="120px" alt="">
-                    <h3>Sejarah</h3>
+                    <img src="{{url('assets/images/highlight/barang.png')}}" width="120px" alt="">
+                    <h3>Barang Bawaan</h3>
                     <p>
-                      Selain memiliki berbagai destinasi wisata alamnya, Kota Bandung turut dihuni banyak bangunan bersejarah sebagai saksi kemerdekaan Indonesia yang masih terasa sampai sekarang.
+                      Setiap jenis wisata pasti memiliki kebutuhan dan jenis tas yang berbeda, bagi kamu yang hendak naik gunung, tas carrier pastilah jadi syarat utama membawa barang bawaan. Selalu sesuaikan tas bawaan dengan jenis wisata yang jamu jalani.
                    </p>
 
                 </div>
             </div>
         </div>
-        <div id="news"></div>
     </section>
 
-    <section class="landing news">
-
-        <div class="container">
-            <h2>Berita Terkini</h2>
-            <div class="row" id="newsContainer">
-
-            </div>
-        </div>
-
-    </section>
-
-    <section class="landing wisata" id="wisata">
+    <!-- pantai -->
+    <section class="landing wisata" id="pantai">
         <div style="padding-top: 60px" class="container">
-            <center><h2 style="margin-top:10px">Wisata Bandung</h2></center>
+            <center><h2 style="margin-top:10px">Pantai</h2></center>
         </div>
         <div class="owl-carousel owl-theme">
-            @foreach($wisata as $data)
+            @foreach($pantai as $data)
             <div class="item">
               <a href="/wisata/{{ $data->id }}">
                 <div class="item-image">
@@ -113,105 +103,65 @@
         </div>
         <div class="features-slanted"></div>
     </section>
-
-    <div id="paket"></div>
-
-    <section class="landing paket">
-        <div class="container">
-            <h2 style="margin-top: 200px; margin-bottom:50px">Paket Wisata</h2>
-            <p>Jelajahi Dan Kunjungi Tempat Wisata Nan Indah Di Bandung Dengan Paket Wisata Kami</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="plans-card d-flex flex-column">
-                        <div class="plans-header d-flex align-items-center justify-content-center">
-                            <p>paket</p>
-                            <h2>Merakyat</h2>
-                        </div>
-                        <div class="plans-content">
-                            <h3 class="font-segoe color-black text-center">
-                              Rp. 1.600.000,-
-                              <span> / pax </span>
-                            </h3>
-                            <br>
-                            <hr>
-                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
-                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
-                            <p class="font-segoe color-black text-center">Gedung Sate</p>
-                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
-                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
-                            <p class="font-segoe color-black text-center  bg-grey color-disable">De’Ranch Lembang</p>
-                            <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
-                            <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
-                            <a href="/paket/1">
-                              <button class="btn btn-primary">Detail Paket</button>
-                            </a>
-                        </div>
-                    </div>
+<!-- Gunung -->
+    <section class="landing wisata" id="gunung">
+        <div style="padding-top: 60px" class="container">
+            <center><h2 style="margin-top:10px">Gunung</h2></center>
+        </div>
+        <div class="owl-carousel owl-theme">
+            @foreach($gunung as $data)
+            <div class="item">
+              <a href="/wisata/{{ $data->id }}">
+                <div class="item-image">
+                  <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto"  alt="">
                 </div>
-                <div class="col-md-4">
-                    <div class="plans-card d-flex flex-column">
-                        <div class="plans-header d-flex align-items-center justify-content-center">
-                            <p>paket</p>
-                            <h2>Menengah</h2>
-                        </div>
-                        <div class="plans-content">
-                            <h3 class="font-segoe color-black text-center">
-                              Rp. 1.750.000,-
-                              <span> / pax </span>
-                            </h3>
-                            <br>
-                            <hr>
-                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
-                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
-                            <p class="font-segoe color-black text-center">Gedung Sate</p>
-                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
-                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
-                            <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
-                            <p class="font-segoe color-black text-center color-disable">Cihampelas Walk</p>
-                            <p class="font-segoe color-black text-center  bg-grey color-disable">Kebun Begonia</p>
-                            <a href="/paket/2">
-                              <button class="btn btn-primary">Detail Paket</button>
-                            </a>
-                        </div>
-                    </div>
+                <div class="item-text">
+                  <span class="item-kicker">{{ $data->nama }}</span>
+                  <h3 class="item-title">{{ $data->alamat }}</h3>
                 </div>
-                <div class="col-md-4">
-                    <div class="plans-card d-flex flex-column">
-                        <div class="plans-header d-flex align-items-center justify-content-center">
-                            <p>paket</p>
-                            <h2>Soeltan</h2>
-                        </div>
-                        <div class="plans-content">
-                            <h3 class="font-segoe color-black text-center">
-                              Rp. 2.200.000,-
-                              <span> / pax </span>
-                            </h3>
-                            <br>
-                            <hr>
-                            <p class="font-segoe color-black text-center">Floating Market Lembang</p>
-                            <p class="font-segoe color-black text-center bg-grey">Farmhouse Lembang</p>
-                            <p class="font-segoe color-black text-center">Gedung Sate</p>
-                            <p class="font-segoe color-black text-center bg-grey">Alun – Alun Bandung</p>
-                            <p class="font-segoe color-black text-center">Gedung Asia Afrika</p>
-                            <p class="font-segoe color-black text-center  bg-grey">De’Ranch Lembang</p>
-                            <p class="font-segoe color-black text-center">Cihampelas Walk</p>
-                            <p class="font-segoe color-black text-center  bg-grey">Kebun Begonia</p>
-                            <a href="/paket/3">
-                              <button class="btn btn-primary">Detail Paket</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+              </a>
             </div>
+            @endforeach
+        </div>
+        <div style="margin-top: 40px; padding-bottom:40px" class="container d-flex justify-content-center">
+            <a style="font-weight: 700" class="btn btn-primary" href="/wisata">
+                Lihat Semua
+            </a>
         </div>
     </section>
-
+   <!-- danau -->
+   <section class="landing wisata" id="danau">
+        <div style="padding-top: 60px" class="container">
+            <center><h2 style="margin-top:10px">Danau</h2></center>
+        </div>
+        <div class="owl-carousel owl-theme">
+            @foreach($danau as $data)
+            <div class="item">
+              <a href="/wisata/{{ $data->id }}">
+                <div class="item-image">
+                  <img class="item-image " src="{{asset('assets/images/wisata')}}/{{ $data->background }}"  width="auto"  alt="">
+                </div>
+                <div class="item-text">
+                  <span class="item-kicker">{{ $data->nama }}</span>
+                  <h3 class="item-title">{{ $data->alamat }}</h3>
+                </div>
+              </a>
+            </div>
+            @endforeach
+        </div>
+        <div style="margin-top: 40px; padding-bottom:40px" class="container d-flex justify-content-center">
+            <a style="font-weight: 700" class="btn btn-primary" href="/wisata">
+                Lihat Semua
+            </a>
+            <div class="features-slanted"></div>
+        </div>
+    </section>
     <!-- Footer  -->
     <section style="margin-top:0!important" class="footer">
         <div class="container">
           <center>
-            <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
-             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
+            <img src="{{url('assets/images/logo/nobox.png')}}" width="150px" alt="Logo">
+             <font color="#f5f5f5" class="font-segoe text-center nopadding">Kuy Jalan - Universitas Bumigora Mataram</p>
           </center>
         </div>
     </section>

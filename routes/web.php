@@ -38,17 +38,6 @@ Route::prefix('wisata')->group(function(){
   Route::get('/{id}/gallery', 'HomeController@wisata');
 });
 
-Route::prefix('paket')->group(function(){
-  Route::get('/{id}', 'HomeController@paket');
-});
-
-Route::prefix('transaksi')->group(function(){
-  Route::get('/', 'TransaksiController@index');
-  Route::get('/{id}', 'TransaksiController@show');
-  Route::post('/', 'TransaksiController@store');
-  Route::post('/{id}', 'TransaksiController@update');
-});
-
 Route::prefix('admin')->group(function(){
   Route::prefix('wisata')->group(function(){
     Route::get('/', 'Admin\WisataController@index');
@@ -58,11 +47,4 @@ Route::prefix('admin')->group(function(){
     Route::post('/{id}', 'Admin\WisataController@update');
     Route::get('/{id}', 'Admin\WisataController@destroy');
   });
-  Route::prefix('transaksi')->group(function(){
-    Route::get('/', 'Admin\TransaksiController@index');
-    Route::get('/terima/{id}', 'Admin\TransaksiController@terima');
-    Route::get('/tolak/{id}', 'Admin\TransaksiController@tolak');
-  });
-
-  Route::get('/riwayat', 'Admin\TransaksiController@riwayat');
 });

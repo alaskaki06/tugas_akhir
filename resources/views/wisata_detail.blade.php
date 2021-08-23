@@ -44,13 +44,21 @@
                         </p>
                     </div>
                     <div class="group-content-information">
-                        <h6>Tanggal Didirikan</h6>
+                        <h6>Harga Tiket Masuk</h6>
                         <p class="content-text">
-                            @if($data->tanggal_dibangun)
-                            {{ $data->tanggal_dibangun }}
-                            @else
-                            -
-                            @endif
+                           Rp.{{ $data->harga_tiket }}
+                        </p>
+                    </div>
+                    <div class="group-content-information">
+                        <h6>Map</h6>
+                        <p class="content-text">
+                          <a href="{{ $data->link_map }}"><img src="{{url('assets/images/logo/map.png')}}" alt=""></a> 
+                        </p>
+                    </div>
+                    <div class="group-content-information">
+                        <h6>Saran Berpergian</h6>
+                        <p class="content-text">
+                          {{ $data->tips }}
                         </p>
                     </div>
                     <div class="group-content-information">
@@ -82,15 +90,15 @@
             </div>
           <div>
         </div>
-        <div class="map-detail" id="map">
+        <!-- <div class="map-detail" id="map"> -->
         </div>
     </section>
     <!-- Detail Content (Deskripsi)-->
     <section style="margin-top:0!important" class="footer">
         <div class="container">
           <center>
-            <img src="{{url('assets/images/logo/KetapangLogo-White.png')}}" width="150px" alt="Logo">
-             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2019 - Ketapang - Telkom University</p>
+          <img src="{{url('assets/images/logo/nobox.png')}}" width="150px" alt="Logo">
+             <font color="#f5f5f5" class="font-segoe text-center nopadding">&#8212; &nbsp; Copyright &copy; 2020 - Kuy Jalan - Universitas Bumigora Mataram</p>
           </center>
         </div>
     </section>
@@ -132,31 +140,47 @@
       }
     });
     // AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY
+    let marker;
     function initMap() {
-      const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -6.903363, lng: 107.6081381 },
-        zoom: 16
+       const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat:  -8.5830695, lng: 116.3202515 },
+        zoom: 10
       });
 
       const geocoder = new google.maps.Geocoder();
 
       geoLocation(geocoder, map);
-    }
 
-    function geoLocation(geocoder, mapResults) {
-      const address = $("#alamatWisata").text();
-      geocoder.geocode({ address: address }, function(res, status) {
-        if (status == "OK") {
-          mapResults.setCenter(res[0].geometry.location);
-          const marker = new google.maps.Marker({
-            map: mapResults,
-            position: res[0].geometry.location
-          });
-        } else {
-          console.log(status);
-        }
-      });
-    }
+      marker = new google.maps.Marker({
+    map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: { lat: -8.6082519, lng: 116.0717564 },
+  });
+  marker.addListener("click", toggleBounce);
+}
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+
+    // function geoLocation(geocoder, mapResults) {
+    //   const address = $("#alamatWisata").text();
+    //   geocoder.geocode({ address: address }, function(res, status) {
+    //     if (status == "OK") {
+    //       mapResults.setCenter(res[0].geometry.location);
+    //       const marker = new google.maps.Marker({
+    //         map: mapResults,
+    //         position: res[0].geometry.location
+    //       });
+    //     } else {
+    //       console.log(status);
+    //     }
+    //   });
+    // }
     </script>
     <script>
 

@@ -18,7 +18,7 @@
       </div>
     </div>
         <div class="row no-gutters">
-            <div class="col-lg-5 col-sm-12">
+            <div class="col-lg-11 col-sm-12">
             <div class="list-wisata-container">
             <form class="navbar-search">
                   <div class="form-group">
@@ -36,7 +36,7 @@
                 <div class="list-wisata">
                     <div class="row" id="list-wisata">
                       @foreach($wisata as $data)
-                        <div class="col-md-6 col-sm-12">
+                        <div class="col-md-4 col-sm-12">
                           <a href="/wisata/{{$data->id}}">
                           <div class="wisata-card" style="background-image: url({{asset('assets/images/wisata')}}/{{ $data->background }})">
                               <div class="wisata-card-desc">
@@ -54,7 +54,7 @@
             </div>
 
             </div>
-            <div class="col-lg-7 col-sm-12">
+            <div class="col-lg-1 col-sm-12">
                  <div class="map-wisata " id="mapWisata">
                  </div>
             </div>
@@ -63,8 +63,6 @@
     </body>
     <script src="{{url('assets/scripts/jquery.min.js')}}"></script>
     <script src="{{url('assets/scripts/bootstrap/bootstrap.min.js')}}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYTqP6EacKcUYlnQaaGs2TlrKwAhUonoY&callback=initMap"
-    async defer></script>
     <script>
 
     let locationArr = [];

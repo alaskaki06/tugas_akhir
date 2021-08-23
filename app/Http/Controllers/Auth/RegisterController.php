@@ -51,35 +51,32 @@ class RegisterController extends Controller
       $user = User::create([
         'name' => $request->name,
         'email' => $request->email,
-        'role' => 'user',
+        'role' => 'admin',
         'password' => Bcrypt($request->password),
-        'token' => str_random(40)
       ]);
-      Mail::to($request->email)->send(new VerifyMail($user));
-      Session::flash('message', 'Silahkan Cek Email Untuk Verifikasi');
       return redirect('/login');
     }
 
 
-    public function verifyUser($token)
-    {
-      $verifyUser = User::where('token', $token)->first();
-      if(isset($verifyUser) ){
-          if($verifyUser->email_verified_at == null) {
-              $time = Carbon::now();
-              $verifyUser->email_verified_at = $time;
-              $verifyUser->save();
-              Session::flash('message', 'Sukses Melakukan Konfirmasi');
-          }else{
-            Session::flash('message_gagal', 'Anda Sudah Mengkonfirmasi Akun');
-          }
-      }else{
-          Session::flash('message_gagal', 'Akun Tersebut Tidak Ditemukan');
-          return redirect('/login');
-      }
+    // public function verifyUser($token)
+    // {
+    //   $verifyUser = User::where('token', $token)->first();
+    //   if(isset($verifyUser) ){
+    //       if($verifyUser->email_verified_at == null) {
+    //           $time = Carbon::now();
+    //           $verifyUser->email_verified_at = $time;
+    //           $verifyUser->save();
+    //           Session::flash('message', 'Sukses Melakukan Konfirmasi');
+    //       }else{
+    //         Session::flash('message_gagal', 'Anda Sudah Mengkonfirmasi Akun');
+    //       }
+    //   }else{
+    //       Session::flash('message_gagal', 'Akun Tersebut Tidak Ditemukan');
+    //       return redirect('/login');
+    //   }
 
-      return redirect('/login');
-    }
+    //   return redirect('/login');
+    // }
 
 
 }

@@ -17,8 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $wisata = Wisatas::query()->orderBy('nama', 'asc')->limit(5)->get();
-      return view('home', compact('wisata'));
+      $gunung = Wisatas::query()->where('kategori', 'gunung')->limit(6)->get();
+      $pantai = Wisatas::query()->where('kategori', 'pantai')->limit(5)->get();
+      $danau = Wisatas::query()->where('kategori', 'danau')->limit(7)->get();
+      return view('home', compact('danau','gunung','pantai'));
     }
 
     public function wisata()

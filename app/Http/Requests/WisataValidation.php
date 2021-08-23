@@ -28,7 +28,8 @@ class WisataValidation extends FormRequest
           'deskripsi' => 'required|min:100',
           'alamat' => 'required',
           'waktu' => 'required',
-          'background' => 'required|mimes:jpeg,bmp,png,jpg|dimensions:min_width=1200,min_height=500',
+          'background' => 'required|mimes:jpeg,bmp,png,jpg| max:2000000',
         ];
     }
 }
+    

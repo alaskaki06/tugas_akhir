@@ -46,7 +46,7 @@
                         <label for="inputNamaWisata" class="col-sm-2 col-form-label">Nama Wisata</label>
                         <div class="col-sm-10">
                             <input type="text" name="nama" class="form-control" id="inputNamaWisata"
-                                placeholder="E.g. Farmhouse Lembang">
+                                placeholder="nama tempat wisata">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -63,16 +63,40 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputTanggalDidirikan" class="col-sm-2 col-form-label">Tanggal Didirikan</label>
+                        <label for="inputHargaTiket" class="col-sm-2 col-form-label">Harga Tiket</label>
                         <div class="col-sm-10">
-                            <input name="tanggal_dibangun" type="date" class="form-control" id="inputTanggalDidirikan"
-                                placeholder="E.g. Desember 2015">
+                            <input name="Harga_tiket" type="text" class="form-control" id="inputHargaTiket"
+                                placeholder="Rp.xxxxx ">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputLinkMap" class="col-sm-2 col-form-label">Link Map</label>
+                        <div class="col-sm-10">
+                            <input name="link_map" type="text" class="form-control" id="inputLinkMap"
+                                placeholder="https://g.page/dapoer-sasak?share">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputKategori" class="col-sm-2 col-form-label">Kategori</label>
+                        <div class="col-sm-10">
+                        <select name="kategori" class="form-control" id="inputKategori">
+                            <option>Pilih Kategori</option>
+                            <option value="pantai">Pantai</option>
+                            <option value="danau">Danau</option>
+                            <option value="gunung">Gunung</option>
+                        </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="inputNoTelp" class="col-sm-2 col-form-label">No Telepon</label>
                         <div class="col-sm-10">
                             <input name="telepon" type="text" class="form-control" id="inputNoTelp" placeholder="E.g. 082239473609">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputTips" class="col-sm-2 col-form-label">Saran Berpergian</label>
+                        <div class="col-sm-10">
+                            <textarea name="tips" class="form-control" id="inputTips" rows="4"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

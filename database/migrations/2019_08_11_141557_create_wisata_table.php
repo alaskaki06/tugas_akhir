@@ -19,7 +19,10 @@ class CreateWisataTable extends Migration
             $table->text('deskripsi');
             $table->string('alamat');
             $table->string('waktu')->nullable();
-            $table->string('tanggal_dibangun')->nullable();
+            $table->string('kategori');
+            $table->string('harga_tiket')->nullable();
+            $table->text('link_map');
+            $table->text ('tips');
             $table->string('background');
             $table->string('telepon')->nullable();
             $table->timestamps();
