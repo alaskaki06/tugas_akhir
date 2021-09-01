@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-4 detail-content-desc">
                     <h3 class="title-content">About</h3>
-                    <p class="content-text">
+                    <p align="left" class="content-text">
                         {{ $data->deskripsi }}
                     </p>
                 </div>
