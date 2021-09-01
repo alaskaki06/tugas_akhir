@@ -62,7 +62,6 @@
           <center>
             <font size="3px">Belum Punya Akun ?</font>
             <a class="txt2"  href="/register">
-              <font size="3px">Daftar</font>
             </a>
           </center>
 				</form>
