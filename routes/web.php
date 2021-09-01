@@ -18,10 +18,10 @@ Route::prefix('login')->group(function(){
   Route::post('/', 'Auth\LoginController@doLogin');
 });
 
-Route::prefix('register')->group(function(){
-  Route::get('/', 'Auth\RegisterController@index');
-  Route::post('/', 'Auth\RegisterController@doRegister');
-});
+// Route::prefix('register')->group(function(){
+//   Route::get('/', 'Auth\RegisterController@index');
+//   Route::post('/', 'Auth\RegisterController@doRegister');
+// });
 
 Route::get('/logout', 'HomeController@logout');
 
